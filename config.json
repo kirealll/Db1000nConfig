@@ -1,0 +1,34 @@
+{
+  "jobs": [
+    {
+      "type": "http",
+      "args": {
+        "method": "GET",
+        "path": "http://178.248.233.32:80",
+        "interval_ms": 1
+      },
+      "client": {
+        "async": true
+      }
+    },
+    {
+      "type": "http",
+      "args": {
+        "method": "GET",
+        "path": "https://178.248.233.32:443",
+        "interval_ms": 1
+      },
+      "client": {
+        "async": true
+      }
+    },
+    {
+      "type": "udp",
+      "args": {      
+        "address": "178.248.236.20:53",
+        "interval_ms": 135,
+        "body": "{{- random_payload 100 -}}"
+      }
+    }    
+  ]
+}
